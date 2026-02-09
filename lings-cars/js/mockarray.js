@@ -6,7 +6,7 @@ const mockArray = [
     "body style": "Sedan",
     "year": 2018,
     "seats": 5,
-    "price": 14500,
+    "price": 21000,
   },
     {
     "type": "Car",
@@ -15,7 +15,7 @@ const mockArray = [
     "body style": "Hatchback",
     "year": 2019,
     "seats": 5,
-    "price": 16800,
+    "price": 19100,
   },
     {
     "type": "Car",
@@ -108,3 +108,4 @@ const mockArray = [
     "price": 29500,
   },
 ]
+export {mockArray};
