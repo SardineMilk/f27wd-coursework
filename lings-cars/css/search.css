@@ -19,12 +19,7 @@
     box-shadow: 0 4px 6px var(--color-background);
 }
 
-.search-control-fields {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
+/*align the text and labels nicely*/
 .search-control-field {
     display: flex;
     flex-direction: column;
