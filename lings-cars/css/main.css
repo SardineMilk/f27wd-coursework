@@ -16,6 +16,8 @@
     --color-warning: #f59e0b;
     --color-error: #ef4444;
 
+    /*temp background colour change so i can actually see the page while styling it NR*/
+    --color-background: #291670;
 }
 
 body {
