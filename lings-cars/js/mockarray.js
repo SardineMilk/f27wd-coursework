@@ -7,6 +7,7 @@ const mockArray = [
     "year": 2018,
     "seats": 5,
     "price": 21000,
+    "imgURL": 
   },
     {
     "type": "Car",
@@ -16,6 +17,7 @@ const mockArray = [
     "year": 2019,
     "seats": 5,
     "price": 19100,
+    "imgURL": 
   },
     {
     "type": "Car",
@@ -25,6 +27,7 @@ const mockArray = [
     "year": 2017,
     "seats": 5,
     "price": 19500,
+    "imgURL":
   },
     {
     "type": "Car",
@@ -34,6 +37,7 @@ const mockArray = [
     "year": 2018,
     "seats": 5,
     "price": 21000,
+    "imgURL":
   },
     {
     "type": "Car",
@@ -43,6 +47,7 @@ const mockArray = [
     "year": 2016,
     "seats": 5,
     "price": 13200,
+    "imgURL":
   },
     {
     "type": "Car",
@@ -52,6 +57,7 @@ const mockArray = [
     "year": 2017,
     "seats": 5,
     "price": 12800,
+    "imgURL":
   },
     {
     "type": "Van",
@@ -61,6 +67,7 @@ const mockArray = [
     "year": 2019,
     "seats": 3,
     "price": 26500,
+    "imgURL":
   },
     {
     "type": "Van",
@@ -70,6 +77,7 @@ const mockArray = [
     "year": 2018,
     "seats": 3,
     "price": 31000,
+    "imgURL":
   },
     {
     "type": "Van",
@@ -79,6 +87,7 @@ const mockArray = [
     "year": 2017,
     "seats": 3,
     "price": 27500,
+    "imgURL":
   },
     {
     "type": "Van",
@@ -88,6 +97,7 @@ const mockArray = [
     "year": 2020,
     "seats": 3,
     "price": 22000,
+    "imgURL": 
   },
     {
     "type": "Van",
@@ -97,6 +107,7 @@ const mockArray = [
     "year": 2019,
     "seats": 8,
     "price": 27000,
+    "imgURL":
   },
     {
     "type": "Van",
@@ -106,6 +117,7 @@ const mockArray = [
     "year": 2021,
     "seats": 9,
     "price": 29500,
+    "imgURL":
   },
 ]
 export {mockArray};
