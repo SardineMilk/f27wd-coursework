@@ -30,13 +30,13 @@ sortOrderField.addEventListener("change", () => {
 
 makeField.addEventListener("input", () => {
   make = makeField.value;
-  console.log("Make Updated")
+  console.log("Make Updated");
   updateSearch();
 });
 
 modelField.addEventListener("input", () => {
   model = modelField.value;
-  console.log("Model Updated")
+  console.log("Model Updated");
   updateSearch();
 });
 
@@ -83,7 +83,7 @@ function updateSearch() {
             removeThis = true;
         }
 
-        if ((newSearchArray[i].bodystyle != bodyStyle)) {
+        if (bodyStyle != "all" && (newSearchArray[i].bodystyle != bodyStyle)) {
             removeThis = true;
         }
         if (removeThis == true) {
@@ -165,6 +165,8 @@ function displayVehicles(vehiclesToDisplay) {
         displayDiv.appendChild(carA);
     }
 }
+
+
 //this needs to be called 1 time at the start
 updateSearch();
 //THIS FUNCTION NEEDS TO BE CALLED INSIDE OF SEARCH.HTML!!!!
