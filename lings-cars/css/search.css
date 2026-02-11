@@ -1,8 +1,64 @@
 .search-control-box {
+    position: fixed;
+    left: 50%;  /*make middle of page*/
+    top: 80px;
+    width: 280px;
+    transform: translateX(-50%);
+
+    background: var(--color-surface); /*border*/
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+
+    padding: 20px;
+    margin: 20px;
+
+    /*use flex to stack the fields nicely, like most car leasing websites*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 6px var(--color-background);
+}
+
+/*align the text and labels nicely*/
+.search-control-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/*labels style*/
+.search-control-field label {
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*input and select style*/
+.search-control-field input,
+.search-control-field select {
+    padding: 10px 12px;
+    background: var(--color-background);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    border-radius: 3px;
+    font-family: var(--font-family);
+    font-size: 16px;
 
 }
 
-.search-control-field {
+/*border colour*/
+.search-control-field input:hover,
+.search-control-field select:hover {
+    border-color: var(--color-primary-hover);
+}
+
+
+/* shadow*/
+.search-control-field input:focus,
+.search-control-field select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(218, 21, 126, 0.1);
     
 }
 
