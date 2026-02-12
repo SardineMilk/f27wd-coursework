@@ -117,7 +117,7 @@ function createURL (vehicleArray,id) {
         }
     }
     //make the URL
-    var url = "./vehicle.html?";
+    var url = "./vehicle.html?id=";
     url = url.concat(vehicleArray[vehicleIndex].id)
     return url;
 }
@@ -136,7 +136,7 @@ function displayVehicles(vehiclesToDisplay) {
         carA.style.display = 'block';
         //this assigns the width for the entire result box
         carA.style.width = '60%';
-        //this should be changed to the appropriate link by uncommenting line 121
+        // It links to the "vehicle" page, with the id as a parameter 
         carA.href = createURL(vehiclesToDisplay,vehiclesToDisplay[i].id);
         //make a div with its attributes
         const carDiv = document.createElement("div");
