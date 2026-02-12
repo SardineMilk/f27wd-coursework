@@ -1,5 +1,6 @@
 const mockArray = [
-  {
+    {
+    "id": 1,
     "type": "Car",
     "brand": "Toyota",
     "model": "Corrola",
@@ -11,6 +12,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 2,
     "type": "Car",
     "brand": "Honda",
     "model": "Civic",
@@ -22,6 +24,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 3,
     "type": "Car",
     "brand": "BMW",
     "model": "3 Series",
@@ -33,6 +36,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 4,
     "type": "Car",
     "brand": "Audi",
     "model": "A4",
@@ -44,6 +48,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 5,
     "type": "Car",
     "brand": "Volkswagen",
     "model": "Golf",
@@ -55,6 +60,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 6,
     "type": "Car",
     "brand": "Ford",
     "model": "Focus",
@@ -66,6 +72,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 7,
     "type": "Van",
     "brand": "Ford",
     "model": "Transit",
@@ -77,6 +84,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 8,
     "type": "Van",
     "brand": "Mercedes-Benz",
     "model": "Sprinter",
@@ -88,6 +96,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 9,
     "type": "Van",
     "brand": "Volkswagen",
     "model": "Transporter T6",
@@ -99,6 +108,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 10,
     "type": "Van",
     "brand": "Renault",
     "model": "Trafic",
@@ -110,6 +120,7 @@ const mockArray = [
     'leaseType': 'normal',
   },
     {
+    "id": 11,
     "type": "Van",
     "brand": "Peugot",
     "model": "Traveller",
@@ -122,6 +133,7 @@ const mockArray = [
      // No image exists on the site for this vehicle, should be changed to a 404 error
   },
     {
+    "id": 12,
     "type": "Van",
     "brand": "Toyota",
     "model": "Proace Verso",
@@ -134,6 +146,7 @@ const mockArray = [
       //There was no verso image on the site, hence the proace standard was used
   },
     {
+    "id": 13,
     "type": "Car",
     "brand": "Toyota",
     "model": "Corrola",
@@ -146,6 +159,7 @@ const mockArray = [
     'leaseType': 'leasing',
   },
     {
+    "id": 14,
     "type": "Car",
     "brand": "Honda",
     "model": "Civic",
@@ -158,6 +172,7 @@ const mockArray = [
     'leaseType': 'leasing',
   },
     {
+    "id": 15,
     "type": "Van",
     "brand": "Renault",
     "model": "Trafic",
@@ -170,6 +185,7 @@ const mockArray = [
     'leaseType': 'leasing',
   },
     {
+    "id": 16,
     "type": "Van",
     "brand": "Volkswagen",
     "model": "Transporter T6",
