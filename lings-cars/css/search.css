@@ -71,5 +71,5 @@
     /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk*/
 }
 .search-results-class div {
-
+    display: flex;
 }

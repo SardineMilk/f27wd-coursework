@@ -116,6 +116,7 @@ function displayVehicles(vehiclesToDisplay) {
         const carDiv = document.createElement("div");
         carDiv.id = (vehiclesToDisplay[i].brand + i);
         const textBlock = document.createElement("div");
+        textBlock.style.flexDirection = 'column';
 
         //image
         //I DO NOT KNOW HOW THIS FUNCTIONS, BUT IT DOES!
@@ -123,11 +124,15 @@ function displayVehicles(vehiclesToDisplay) {
         console.log(vehiclesToDisplay[i].imgURL);
         console.log(vehiclesToDisplay[i]);
         imageComponent.src = vehiclesToDisplay[i].imgURL;
-        imageComponent.style.displayDiv = "block";
-        imageComponent.style.float = "inline-end";
+
+        var imageDiv = document.createElement('div');
+        imageDiv.style.display = "flex";
+        imageDiv.style.flexDirection = 'row';
         //THIS CANNOT GO ABOVE 14!
         imageComponent.style.height = "14vw";
-        textBlock.appendChild(imageComponent);
+        imageComponent.style.width = "20vw";
+        imageDiv.appendChild(imageComponent);
+        carDiv.appendChild(imageDiv);
 
         //type
         const typePara = document.createElement('p');
