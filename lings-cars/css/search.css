@@ -2,7 +2,8 @@
     /*made filter stay on left side of page*/
     position: sticky;
     top: 0%;
-    width: 33%;
+    max-width: 33%;
+min-width: 220px;
     overflow-y: auto;
     
 
@@ -77,11 +78,13 @@
 
 
 .search-results-class {
-    width: 67%;
+    flex: 1 1 67%;
     
 
     /*scrolling*/
     overflow-y: auto;
+    min-width: 0;
+    overflow: auto;;
     padding: 25px;
 
     background: url("../images/car-bg.jpg") center/cover no-repeat;
@@ -91,6 +94,7 @@
     /*autofits to screen size*/
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 20px;
+    background:url("..images/car-bg.jpg") center/cover no-repeat;
 }
 
 .car-card {
