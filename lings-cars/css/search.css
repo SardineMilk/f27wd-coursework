@@ -1,22 +1,26 @@
 .search-control-box {
-    position: fixed;
-    left: 50%;  /*make middle of page*/
-    top: 80px;
-    width: 280px;
-    transform: translateX(-50%);
+    /*made filter stay on left side of page*/
+    position: sticky;
+    left: 10px;  /*Move on left of page*/
+    top: 20px;
+    width: 33%;
+    min-width: 280px;
+    height: 100vh;
 
     background: var(--color-surface); /*border*/
     border: 2px solid var(--color-border);
     border-radius: 12px;
 
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
 
     /*use flex to stack the fields nicely, like most car leasing websites*/
     display: flex;
     flex-direction: column;
     gap: 15px;
     box-shadow: 0 4px 6px var(--color-background);
+
+    /*scroll filters if it is tall*/
+    overflow-y: auto;
 }
 
 /*align the text and labels nicely*/
