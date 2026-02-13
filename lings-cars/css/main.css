@@ -4,20 +4,20 @@
     --font-family: Arial, Helvetica, sans-serif;
 
     /* Colour changed :) NR*/
-    --color-primary: #291670;
+    --color-primary: #c37ddd;
     --color-primary-hover: #DA157E;
     --color-secondary: #FE6F88;
     --color-background: #EFFBE0;
     --color-surface: #000000; 
-    --color-border: #c37ddd;
-    --color-text: #ffffff;
+    --color-border: #291670;
+    --color-text: #000000;
+    --color-text2: #ffffff;
 
     --color-success: #22c55e;
     --color-warning: #f59e0b;
     --color-error: #ef4444;
 
-    /*temp background colour change so i can actually see the page while styling it NR*/
-    --color-background: #291670;
+
 }
 
 body {
