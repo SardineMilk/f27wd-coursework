@@ -80,7 +80,7 @@ min-width: 220px;
 .search-results-class {
     flex: 1 1 67%;
     
-
+    left: 33%;
     /*scrolling*/
     overflow-y: auto;
     min-width: 0;
