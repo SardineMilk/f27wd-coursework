@@ -86,8 +86,10 @@
 
     background: url("../images/car-bg.jpg") center/cover no-repeat;
 
+    
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /*autofits to screen size*/
+    /*autofits to screen size*/
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 20px;
 }
 
@@ -107,10 +109,12 @@
 }
 
 .car-card img {
+    
     width: 100%;
     height: 130px;
     object-fit: contain;
-    /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk*/
+    /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk, fixed NR v*/
+    display: block;
 }
 .search-results-class div {
     display: flex;
