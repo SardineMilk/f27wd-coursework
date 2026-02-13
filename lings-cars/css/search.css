@@ -7,7 +7,7 @@ min-width: 220px;
     overflow-y: auto;
     
     order: 1; /*first colemn..*/
-    
+
     background: var(--color-surface); /*border*/
     border: 2px solid var(--color-border);
     border-radius: 12px;
@@ -79,14 +79,14 @@ min-width: 220px;
 
 
 .search-results-class {
-    flex: 1 1 67%;
+    flex: 1 1 90%;
     
     order: 2; /*move box to second colemn..*/
     /*scrolling*/
     overflow-y: auto;
     min-width: 0;
     overflow: auto;;
-    padding: 25px;
+    padding: 100px 20px 20px 20px;
 
     background: url("../images/car-bg.jpg") center/cover no-repeat;
 
