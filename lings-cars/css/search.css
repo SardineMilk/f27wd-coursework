@@ -1,22 +1,29 @@
 .search-control-box {
-    position: fixed;
-    left: 50%;  /*make middle of page*/
-    top: 80px;
-    width: 280px;
-    transform: translateX(-50%);
+    /*made filter stay on left side of page*/
+    position: sticky;
+    top: 0;
+    width: 33%;
+    min-width: 220px;
+    max-width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    
+    order: 1; /*first colemn..*/
 
     background: var(--color-surface); /*border*/
     border: 2px solid var(--color-border);
     border-radius: 12px;
 
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
 
     /*use flex to stack the fields nicely, like most car leasing websites*/
     display: flex;
     flex-direction: column;
     gap: 15px;
-    box-shadow: 0 4px 6px var(--color-background);
+    box-shadow: 0 4px 6px var(--color-border);
+
+    /*scroll filters if it is tall*/
+    overflow-y: auto;
 }
 
 /*align the text and labels nicely*/
@@ -62,14 +69,74 @@
     
 }
 
-.search-results-class p {
+.search-results-class p{
     /* this is for the text inside of the search result boxes*/
     align-items: left;
 }
 .search-results-class img {
     /* this is for the image*/
-    /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk*/
+    align-items: right;
+    
+}
+
+
+.search-results-class {
+    flex: 1 1 auto;
+    
+    order: 2; /*move box to second colemn..*/
+    /*scrolling*/
+    overflow-y: auto;
+    min-width: 0;
+    overflow: auto;;
+    padding: 100px 20px 20px 20px;
+
+    background: url("../images/car-bg.jpg") center/cover no-repeat;
+
+    
+    display: grid;
+    /*autofits to screen size*/
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px;
+    background:url("..images/car-bg.jpg") center/cover no-repeat;
+}
+
+.car-card {
+    background: var(--color-secondary);
+    border-radius: 12px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: auto;
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(4px);
+}
+
+.car-card img {
+    
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk, fixed NR v*/
+    display: block;
 }
 .search-results-class div {
     display: flex;
+}
+
+/* make content align side by side by making the main a flex container*/
+main {
+    display: flex;
+    /* -navbar height */
+    height: calc(100vh - 80px);
+    gap: 10px;
+}
+
+.page-layout {
+    display: flex;
+    /* subtract navbar height */
+    height: calc(100vh - 80px); 
 }

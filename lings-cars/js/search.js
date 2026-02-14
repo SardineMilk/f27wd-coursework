@@ -129,11 +129,39 @@ function displayVehicles(vehiclesToDisplay) {
     //clear the div
     displayDiv.innerHTML = '';
     //loop through each element of the search array
-    for (var i = 0; i<vehiclesToDisplay.length;i++) {
+    vehiclesToDisplay.forEach((car, i) => {
+        
+        // clickable wrapper
+        const carA = document.createElement('a');
+        carA.href = car.pageLink || "#";
+        carA.className = "car-card";   //link to class
+
+        // car image
+        const img = document.createElement('img');
+        img.src = car.imgURL || "./assets/images/placeholder-car.png";
+
+        // title
+        const title = document.createElement('h3');
+        title.textContent = `${car.brand} ${car.model}`;
+
+        // info row
+        const info = document.createElement('p');
+        info.textContent = `${car.year} • ${car.type} • ${car.seats} seats`;
+
+        // price monthly)
+        const price = document.createElement('h2');
+        price.textContent = `£${car.price}/mo`;
+
+        // assembly of constants
+        carA.append(img, title, info, price);
+        displayDiv.appendChild(carA);
+        
+    }); {
 
         //make an a tag so its clickable
         const carA = document.createElement('a');
         carA.style.display = 'block';
+
         //this assigns the width for the entire result box
         carA.style.width = '60%';
         // It links to the "vehicle" page, with the id as a parameter 
