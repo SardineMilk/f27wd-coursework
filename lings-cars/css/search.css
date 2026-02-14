@@ -1,10 +1,12 @@
 .search-control-box {
     /*made filter stay on left side of page*/
     position: sticky;
-    top: 0%;
-    max-width: 33%;
-min-width: 220px;
-    overflow-y: auto;
+    top: 0;
+    width: 33%;
+    min-width: 220px;
+    max-width: 400px;
+    height: 500px;
+    flex-shrink: 0;
     
     order: 1; /*first colemn..*/
 
@@ -18,7 +20,7 @@ min-width: 220px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    box-shadow: 0 4px 6px var(--color-background);
+    box-shadow: 0 4px 6px var(--color-border);
 
     /*scroll filters if it is tall*/
     overflow-y: auto;
@@ -79,7 +81,7 @@ min-width: 220px;
 
 
 .search-results-class {
-    flex: 1 1 90%;
+    flex: 1 1 auto;
     
     order: 2; /*move box to second colemn..*/
     /*scrolling*/
@@ -107,7 +109,7 @@ min-width: 220px;
     flex-direction: column;
     justify-content: space-between;
 
-    min-height: 240px;
+    min-height: auto;
 
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     backdrop-filter: blur(4px);
@@ -123,6 +125,14 @@ min-width: 220px;
 }
 .search-results-class div {
     display: flex;
+}
+
+/* make content align side by side by making the main a flex container*/
+main {
+    display: flex;
+    /* -navbar height */
+    height: calc(100vh - 80px);
+    gap: 10px;
 }
 
 .page-layout {

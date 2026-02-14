@@ -138,7 +138,7 @@ function displayVehicles(vehiclesToDisplay) {
 
         // car image
         const img = document.createElement('img');
-        img.src = car.imagePath || "../images/placeholder-car.png";
+        img.src = car.imgURL || "./assets/images/placeholder-car.png";
 
         // title
         const title = document.createElement('h3');
