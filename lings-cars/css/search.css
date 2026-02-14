@@ -1,7 +1,8 @@
 .search-control-box {
-    /*made filter stay on left side of page*/
+    /*made filter stay on left side of page - follows the user*/
     position: sticky;
-    top: 0;
+    top: 80px;
+    left: 10px;
     width: 33%;
     min-width: 220px;
     max-width: 400px;
@@ -10,7 +11,7 @@
     
     order: 1; /*first colemn..*/
 
-    background: var(--color-surface); /*border*/
+    background: var(--color-primary); /*border*/
     border: 2px solid var(--color-border);
     border-radius: 12px;
 
@@ -24,6 +25,9 @@
 
     /*scroll filters if it is tall*/
     overflow-y: auto;
+
+    /*text colour*/
+    color: var(--color-text2);
 }
 
 /*align the text and labels nicely*/
@@ -35,7 +39,7 @@
 
 /*labels style*/
 .search-control-field label {
-    color: var(--color-text);
+    color: var(--color-text2);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
@@ -46,7 +50,7 @@
 .search-control-field select {
     padding: 10px 12px;
     background: var(--color-background);
-    color: var(--color-text);
+    color: var(--color-text2);
     border: 2px solid var(--color-border);
     border-radius: 3px;
     font-family: var(--font-family);
@@ -90,20 +94,20 @@
     overflow: auto;;
     padding: 100px 20px 20px 20px;
 
-    background: url("../images/car-bg.jpg") center/cover no-repeat;
+
+    background: var(--color-border);
 
     
     display: grid;
     /*autofits to screen size*/
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 20px;
-    background:url("..images/car-bg.jpg") center/cover no-repeat;
 }
 
 .car-card {
-    background: var(--color-secondary);
+    background: var(--color-primary);
     border-radius: 12px;
-    padding: 16px;
+    padding: 12px;
 
     display: flex;
     flex-direction: column;
@@ -113,6 +117,9 @@
 
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     backdrop-filter: blur(4px);
+    /*make text white, make it so it removes link underline*/
+    color: var(--color-text2);
+    text-decoration: none;
 }
 
 .car-card img {
@@ -133,6 +140,7 @@ main {
     /* -navbar height */
     height: calc(100vh - 80px);
     gap: 10px;
+    background: var(--color-border);
 }
 
 .page-layout {
