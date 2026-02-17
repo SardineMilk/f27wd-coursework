@@ -29,7 +29,6 @@
 @media(max-width: 600px){
   .navbar{
     padding: 10px 20px;
-    background-color: aqua; /* checking if the max width works*/
   }
 
   .navbar-links {
