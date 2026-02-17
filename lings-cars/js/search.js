@@ -8,6 +8,8 @@ const makeField = document.getElementById("search-make-field");
 const modelField = document.getElementById("search-model-field");
 const styleField = document.getElementById("search-style-field");
 const leaseField = document.getElementById('search-lease-field');
+const minPriceField = document.getElementById('price-min');
+const maxPriceField = document.getElementById('price-max');
 
 //initial variable set
 var sortBy = sortField.value;
@@ -16,6 +18,8 @@ var make = makeField.value;
 var model = modelField.value;
 var bodyStyle = styleField.value;
 var lease = leaseField.value;
+var minPrice = minPriceField.value;
+var maxPrice = maxPriceField.value;
 
 // listeners which check for when someone updates the box
 sortField.addEventListener("change", () => {
@@ -54,6 +58,19 @@ leaseField.addEventListener("change", () => {
   updateSearch();
 });
 
+minPriceField.addEventListener('change', () => {
+    minPrice = minPriceField.value;
+    updateSearch();
+    console.log('Price Updated (min)')
+});
+
+maxPriceField.addEventListener('change', () => {
+    maxPrice = maxPriceField.value;
+    updateSearch();
+    console.log('Price Updated (max)')
+});
+
+
 function updateSearch() {
     //create new array which is a copy of mockaray
     var newSearchArray = [...mockArray];
@@ -86,10 +103,17 @@ function updateSearch() {
         if (bodyStyle != "all" && (newSearchArray[i].bodystyle != bodyStyle)) {
             removeThis = true;
         }
-        console.log(lease);
         if (lease != "all" && (newSearchArray[i].leaseType != lease)){
             removeThis = true;
         }
+
+        //check it is within the price range
+        console.log(maxPrice + " ," +minPrice);
+        if ((minPrice > newSearchArray[i].price) || (maxPrice <newSearchArray[i].price)) {
+            removeThis = true;           
+        }
+
+        //removes if it fills any of the previosu conditions
         if (removeThis == true) {
             newSearchArray.splice(i,1);
         }
