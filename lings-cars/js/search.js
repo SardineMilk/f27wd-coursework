@@ -102,8 +102,8 @@ function updateSlider() {
 
 
     // Change the CSS values to colour the slider properly
-    sliderRange.style.left = percentMin + "%";
-    sliderRange.style.width = (percentMax - percentMin) + "%";
+    sliderRange.style.left = (percentMin + 6.15) + "%";
+    sliderRange.style.width = ((percentMax - percentMin) - 6.15) + "%";
 }
 
 function updateSearch() {
