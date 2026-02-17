@@ -10,7 +10,7 @@ const styleField = document.getElementById("search-style-field");
 const leaseField = document.getElementById('search-lease-field');
 const minPriceField = document.getElementById('price-min');
 const maxPriceField = document.getElementById('price-max');
-const sliderRange = document.getElementById("slider-range");
+const sliderRange = document.getElementById("selected-track");
 
 
 //initial variable set
@@ -60,22 +60,21 @@ leaseField.addEventListener("change", () => {
   updateSearch();
 });
 
-minPriceField.addEventListener('change', () => {
+minPriceField.addEventListener('input', () => {
     minPrice = minPriceField.value;
     updateSearch();
     updateSlider();
     console.log('Price Updated (min)')
 });
 
-maxPriceField.addEventListener('change', () => {
+maxPriceField.addEventListener('input', () => {
     maxPrice = maxPriceField.value;
     updateSearch();
     updateSlider();
     console.log('Price Updated (max)')
 });
 
-maxPriceField.addEventListener('input', () => updateSlider());
-minPriceField.addEventListener('input', () => updateSlider());
+
 
 function updateSlider() {
     maxPrice = parseInt(maxPriceField.value);
