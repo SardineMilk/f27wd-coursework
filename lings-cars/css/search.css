@@ -3,11 +3,11 @@
     position: sticky;
 
     /*need to figure out how to make it so when at top of page the navbar and filter dont touch*/
-    left: 20px;
+    left: 10px;
     top: 90px;
     
     height: auto;
-    max-height: 500px;
+    /*max-height: 500px;*/
 
     flex-shrink: 0;
 
@@ -21,7 +21,8 @@
 
 
 
-    padding: 10px;
+    /*padding: 10px;*/
+    padding: 5px;
 
     /*use flex to stack the fields nicely, like most car leasing websites*/
     display: flex;
@@ -31,8 +32,6 @@
     gap: 15px;
     box-shadow: 0 4px 6px var(--color-border);
 
-    /*scroll filters if it is tall*/
-    overflow-y: auto;
 
     /*text colour*/
     color: var(--color-text2);
@@ -169,23 +168,14 @@ main {
     height: calc(100vh - 80px); 
 }
 
+
 .range-container {
     position: relative;
-    width: 100%;
+    width: 91%;
     height: 40px;
-}
+    color: var(--color-error);
 
-.slider-track {
-    position: absolute;
-    width: 100%;
-    height: 10px;    
-    background: var(--color-primary)
-}
 
-.slider-range {
-    position: absolute;
-    height: 10px;
-    background: var(--color-primary-hover);
 }
 
 /* For both the sliders*/
@@ -193,27 +183,55 @@ main {
     position: absolute;
     width: 100%;
     pointer-events: none;
-    background: none;
+
 }
 
-/*For the knobs*/
+/* Full slider - unselected*/
+.slider-track {
+    position: absolute;
+    width: 100%;
+    height: 10px;    
+    background: var(--color-error);
+    margin-top: 20px;
+    margin-left: 15px;
+
+    border-radius: 5px;
+    z-index: 1; 
+}
+
+/* Section between handles */
+.slider-range {
+    position: absolute;
+    height: 10px;    
+    background: var(--color-warning);
+    margin-top: 20px;
+    margin-left: 15px;
+
+    border-radius: 5px;
+    z-index: 1; 
+}
+
+
+
+/* Handles */
 .range-container input[type="range"]::-webkit-slider-thumb {
-    pointer-events: all;
+    pointer-events: all; 
     appearance: none;
     height: 20px;
     width: 20px;
-    border-radius: 100%;
+    border-radius: 50%;
     background: var(--color-border);
     cursor: pointer;
-    border: 2px solid black;
+    z-index: 1000; 
 }
 
 .range-container input[type="range"]::-moz-range-thumb {
     pointer-events: all;
+    appearance: none;
     height: 20px;
     width: 20px;
-    border-radius: 100%;
+    border-radius: 50%; 
     background: var(--color-border);
     cursor: pointer;
-    border: none;
+    z-index: 1000; 
 }
