@@ -10,6 +10,8 @@ const styleField = document.getElementById("search-style-field");
 const leaseField = document.getElementById('search-lease-field');
 const minPriceField = document.getElementById('price-min');
 const maxPriceField = document.getElementById('price-max');
+const sliderRange = document.getElementById("selected-track");
+
 
 //initial variable set
 var sortBy = sortField.value;
@@ -58,18 +60,51 @@ leaseField.addEventListener("change", () => {
   updateSearch();
 });
 
-minPriceField.addEventListener('change', () => {
+minPriceField.addEventListener('input', () => {
     minPrice = minPriceField.value;
     updateSearch();
+    updateSlider();
     console.log('Price Updated (min)')
 });
 
-maxPriceField.addEventListener('change', () => {
+maxPriceField.addEventListener('input', () => {
     maxPrice = maxPriceField.value;
     updateSearch();
+    updateSlider();
     console.log('Price Updated (max)')
 });
 
+
+
+function updateSlider() {
+    maxPrice = parseInt(maxPriceField.value);
+    minPrice = parseInt(minPriceField.value);
+
+    /* Allows the min slider to push the max */
+    const buffer = 100;
+    if (minPrice > maxPrice-buffer) {
+        maxPriceField.value = minPrice+buffer;
+    } 
+
+    if (minPrice < 0) {
+        minPrice = 0;
+        minPriceField.value = minPrice;
+    }
+    if (maxPrice > 2000) {
+        maxPrice = 2000;
+        maxPriceField.value = maxPrice;
+    }
+
+    
+    // Calculate percent along slider track of min and max handles
+    const percentMin = (minPrice / minPriceField.max) * 100;
+    const percentMax = (maxPrice / maxPriceField.max) * 100;
+
+
+    // Change the CSS values to colour the slider properly
+    sliderRange.style.left = percentMin + "%";
+    sliderRange.style.width = (percentMax - percentMin) + "%";
+}
 
 function updateSearch() {
     //create new array which is a copy of mockaray
