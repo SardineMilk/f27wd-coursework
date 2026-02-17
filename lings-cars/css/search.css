@@ -5,14 +5,13 @@
     /*need to figure out how to make it so when at top of page the navbar and filter dont touch*/
     left: 20px;
     top: 90px;
-    width: 33%;
-    min-width: 200px;
-    max-width: 250px;
+    
     height: auto;
     max-height: 500px;
 
     flex-shrink: 0;
-    
+
+
 
     background: var(--color-primary);
     color: var(--color-text2);
@@ -26,7 +25,8 @@
 
     /*use flex to stack the fields nicely, like most car leasing websites*/
     display: flex;
-    flex: 0 0 350px;
+    flex: 0 0 33%;
+    max-width: 350px;
     flex-direction: column;
     gap: 15px;
     box-shadow: 0 4px 6px var(--color-border);
@@ -103,8 +103,8 @@
     
     display: grid;
     /*autofits to screen size*/
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 15px;
   
     /*move right side over so the image behind filter passes the right side of filter*/
     margin-left: 20px;
@@ -114,8 +114,8 @@
 
 .car-card {
     background: var(--color-primary);
-    border-radius: 12px;
-    padding: 12px;
+    border-radius: 10px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -134,9 +134,9 @@
 }
 
 .car-card img {
-    
     width: 100%;
-    height: 130px;
+    max-height: 120px;
+    flex: 0 0 auto;
     object-fit: contain;
     /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk, fixed NR v*/
     display: block;
