@@ -57,28 +57,20 @@ leaseField.addEventListener("change", () => {
 function updateSearch() {
     //create new array which is a copy of mockaray
     var newSearchArray = [...mockArray];
-    //by price
+
+    // Sort Field
     if (sortBy == "price") {
-        //if ascending
-        if (sortOrder == "asc") {
-            newSearchArray.sort((a, b) => a.price - b.price);
-        }
-        //if descedning
-        else {
-            newSearchArray.sort((a, b) => b.price - a.price);
-        }
+        newSearchArray.sort((a, b) => a.price - b.price);
     }
-    //by year
-    else {
-        //if ascending
-        if (sortOrder == "asc") {
+    else if (sortBy == "year") {
             newSearchArray.sort((a, b) => a.year - b.year);
-        }
-        //if descending
-        else {
-            newSearchArray.sort((a, b) => b.year - a.year);
-        }
     }
+
+    // Sort Order
+    if (sortOrder == "desc") {
+        newSearchArray.reverse()
+    }
+
     //loop backwards so that removing the object doesnt screw with indexing
     for (var i = newSearchArray.length-1 ;i>=0;i--) {
         //filters based on model, only filters when someone has data in the field
