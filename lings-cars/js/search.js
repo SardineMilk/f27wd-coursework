@@ -103,11 +103,12 @@ function updateSlider() {
 
     // Change the CSS values to colour the slider properly
     sliderRange.style.left = (percentMin + 6.15) + "%";
-    sliderRange.style.width = ((percentMax - percentMin) - 6.15) + "%";
+    sliderRange.style.width = (percentMax - ((percentMin) + 1)) + "%";
 }
 
 function updateSearch() {
     //create new array which is a copy of mockaray
+    updateSlider();
     var newSearchArray = [...mockArray];
 
     // Sort Field
