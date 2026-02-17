@@ -10,7 +10,7 @@
     max-height: 500px;
 
     flex-shrink: 0;
-    /*make width shrink for smaller screens */
+
 
 
     background: var(--color-primary);
@@ -26,6 +26,7 @@
     /*use flex to stack the fields nicely, like most car leasing websites*/
     display: flex;
     flex: 0 0 33%;
+    max-width: 350px;
     flex-direction: column;
     gap: 15px;
     box-shadow: 0 4px 6px var(--color-border);
@@ -102,8 +103,8 @@
     
     display: grid;
     /*autofits to screen size*/
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 15px;
   
     /*move right side over so the image behind filter passes the right side of filter*/
     margin-left: 20px;
@@ -113,8 +114,8 @@
 
 .car-card {
     background: var(--color-primary);
-    border-radius: 12px;
-    padding: 12px;
+    border-radius: 10px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -133,9 +134,9 @@
 }
 
 .car-card img {
-    
     width: 100%;
-    height: 130px;
+    max-height: 120px;
+    flex: 0 0 auto;
     object-fit: contain;
     /*THIS DOES NOT WORK, maybe due to inline css usage but it shoudlnt be overwritten so idk, fixed NR v*/
     display: block;
