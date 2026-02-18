@@ -85,6 +85,9 @@ function updateSlider() {
     if (minPrice > maxPrice-buffer) {
         maxPriceField.value = minPrice+buffer;
     } 
+    if (minPrice > maxPrice-buffer) {
+        minPriceField.value = maxPrice-buffer;
+    } 
 
     if (minPrice < 0) {
         minPrice = 0;
