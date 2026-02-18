@@ -1,21 +1,20 @@
 
-/* Root Variables - Applied to whole page*/
+
 :root {
-    --font-family: Arial, Helvetica, sans-serif;
+    --font-family:'Helvetica Neue', Arial, sans-serif;
 
-    /* Colour changed :) NR*/
-    --color-primary: #5B3FA0;
-    --color-primary-hover: #8b4558;
-    --color-secondary: #8b7ba8;
-    --color-background: #EFFBE0;
-    --color-surface: #000000; 
-    --color-border: #1a0f47;
-    --color-text: #000000;
-    --color-text2: #ffffff;
+    /* Global Colour Variables */
+    --color-primary: #BB86FC;
+    --color-secondary: #3700B3;
+    --color-accent: #CF6679;
+    --color-background: #121212;
+    --color-border: #9A67EA;
+    --color-surface: #1E1E1E;
+    --color-text: #E0E0E0;
+    --color-link: #CF6679;
+    --color-hover: #E0A7FF;
 
-    --color-success: #22c55e;
-    --color-warning: #f59e0b;
-    --color-error: #ef4444;
+    --navbar-height: 90px;
 }
 
 html, body {
@@ -25,8 +24,9 @@ html, body {
 
 body {
     font-family: var(--font-family);
+    background-color: var(--color-background);
     color: var(--color-text);
-    background: var(--color-background);
+    line-height: 1.6;
 
     display: flex;
     flex-direction: column;
@@ -35,3 +35,17 @@ body {
 main { 
     flex: 1;
 }
+
+a {
+    color: var(--color-link);
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;
+
+    transition: color 0.2s ease; /* Smooth transition to hover effect */
+}
+
+a:hover {
+    color: var(--color-hover);
+    text-decoration: underline; /* Underline links when hovering */
+}
+
