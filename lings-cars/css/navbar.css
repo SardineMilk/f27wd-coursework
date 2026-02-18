@@ -1,40 +1,43 @@
 
-/* navbar class*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-primary);
   padding: 15px 40px;
-  border-bottom: 8px solid #000000 
+  border-bottom: 8px solid var(--color-border);
 }
 
+.navbar img {
+  width: 200px; 
+  height: auto;
+  flex-shrink: 0;
+}
 
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-shrink: 0;
 }
 
-.navbar-links a {
-  color: var(--text-color);
-  font-weight: bold;
-  transition: color 0.15s;
-}
 
-.navbar-links a:hover {
-  color: var(--color-primary-hover);
-}
 
-@media(max-width: 600px){
+
+
+@media(max-width: 800px){
   .navbar{
     padding: 10px 20px;
   }
 
   .navbar-links {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Switch to column when page gets small enough */
     align-items: center;
+    gap: 10px;
   }
 
+  .navbar img {
+    width: 50%; 
+    height: auto;
+  }
 }

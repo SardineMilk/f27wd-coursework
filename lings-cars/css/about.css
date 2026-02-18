@@ -7,14 +7,14 @@
     margin: 20px;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: var(--font-family);
-    color: var(--color-text);
+
+    transition: 0.2s ease;
 }
 
 /* Slight shadow and pop-out effect on hover */
 .staff-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 10px var(--color-accent);
 }
 
 .staff-card-name {
@@ -22,10 +22,4 @@
     font-weight: bold;
     color: var(--color-primary);
     margin-bottom: 0.5rem;
-}
-
-.staff-card-description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--color-text);
 }
