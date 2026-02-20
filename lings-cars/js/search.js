@@ -220,7 +220,12 @@ function displayVehicles(vehiclesToDisplay) {
 
         // price monthly)
         const price = document.createElement('h2');
-        price.textContent = `£${car.price}/mo`;
+        if (car.leaseType == 'normal') {
+            price.textContent = `£${car.price}`;
+        }
+        else {
+            price.textContent = `£${car.price}/mo`;
+        }
 
         // assembly of constants
         carA.append(img, title, info, price);
