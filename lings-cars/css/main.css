@@ -57,10 +57,10 @@ body {
 
 /*2nd layer image (logo)*/
 .img2 {
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
+    width: 500px;
     height: auto;
     z-index: 2;
 }
