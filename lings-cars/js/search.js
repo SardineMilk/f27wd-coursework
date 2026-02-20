@@ -13,6 +13,11 @@ const maxPriceField = document.getElementById('price-max');
 const sliderRange = document.getElementById("selected-track");
 
 
+//set the price range
+console.log(getPriceFilter(mockArray));
+
+console.log(minPriceField.max);
+
 //initial variable set
 var sortBy = sortField.value;
 var sortOrder = sortOrderField.value;
@@ -23,6 +28,13 @@ var lease = leaseField.value;
 var minPrice = minPriceField.value;
 var maxPrice = maxPriceField.value;
 
+
+maxPriceField.max = getPriceFilter(mockArray);
+minPriceField.max = getPriceFilter(mockArray);
+maxPriceField.value = getPriceFilter(mockArray);
+console.log(minPriceField.max);
+
+updateSlider(mockArray);
 // listeners which check for when someone updates the box
 sortField.addEventListener("change", () => {
   sortBy = sortField.value;
@@ -81,7 +93,7 @@ function updateSlider() {
     minPrice = parseInt(minPriceField.value);
 
     /* Allows the min slider to push the max */
-    const buffer = 100;
+    const buffer = (maxPriceField.max / 20);
     if (minPrice > maxPrice-buffer) {
         maxPriceField.value = minPrice+buffer;
         minPriceField.value = maxPrice-buffer;
@@ -91,8 +103,8 @@ function updateSlider() {
         minPrice = 0;
         minPriceField.value = minPrice;
     }
-    if (maxPrice > 2000) {
-        maxPrice = 2000;
+    if (maxPrice > maxPriceField.max) {
+        maxPrice = maxPriceField.max;
         maxPriceField.value = maxPrice;
     }
 
@@ -105,6 +117,7 @@ function updateSlider() {
     // Change the CSS values to colour the slider properly
     sliderRange.style.left = (percentMin + 6.15) + "%";
     sliderRange.style.width = (percentMax - ((percentMin) + 1)) + "%";
+
 }
 
 function updateSearch() {
@@ -212,8 +225,18 @@ function displayVehicles(vehiclesToDisplay) {
     }); 
 }
 
+function getPriceFilter(arrayOfVehicles) {
+    var highestPriceVehicle = arrayOfVehicles.reduce((highest,current) => current.price > highest.price ? current : highest);
+    var highestPrice = highestPriceVehicle.price;
+    return highestPrice
+
+}
+
 
 //this needs to be called 1 time at the start
 updateSearch();
+maxPriceField.max = getPriceFilter(mockArray);
+minPriceField.max = getPriceFilter(mockArray);
+maxPriceField.value = getPriceFilter(mockArray);
 //THIS FUNCTION NEEDS TO BE CALLED INSIDE OF SEARCH.HTML!!!!
 export {updateSearch}
