@@ -23,3 +23,7 @@
     color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
+
+.staff-card-description {
+    clear: right;
+}
