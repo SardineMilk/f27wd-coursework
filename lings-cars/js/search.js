@@ -91,6 +91,10 @@ maxPriceField.addEventListener('input', () => {
 function updateSlider() {
     maxPrice = parseInt(maxPriceField.value);
     minPrice = parseInt(minPriceField.value);
+    const rangeText = document.getElementById('range-text');
+    
+    //updates the text range
+    rangeText.innerHTML = `£${minPriceField.value} -> £${maxPriceField.value}`;
 
     /* Allows the min slider to push the max */
     const buffer = (maxPriceField.max / 20);
