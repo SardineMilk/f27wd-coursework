@@ -12,25 +12,31 @@ function createCarCard(car) {
 
   return `
     <article class="car-card" aria-label="${car.brand} ${car.model} details">
-      <div class="car-card__media">
-        <img
-          src="${safeImg}"
-        />
-      </div>
-
-      <div class="car-card__body">
-        <h1 class="car-card__title">${car.brand} ${car.model}</h1>
-        <ul class="car-card__meta">
-          <li><strong>Type:</strong> ${car.type}</li>
-          <li><strong>Body style:</strong> ${car.bodystyle}</li>
-          <li><strong>Year:</strong> ${car.year}</li>
-          <li><strong>Seats:</strong> ${car.seats}</li>
-          <li><strong>Lease type:</strong> ${car.leaseType}</li>
-        </ul>
-        <div class="car-card__price">
-          <span class="car-card__price-label">Price:</span>
-          <span class="car-card__price-value">£${Number(car.price).toLocaleString("en-GB")}</span>
+      <div class=car-card__car-info>
+        <div class="car-card__media">
+          <img id='carImg'
+            src="${safeImg}"
+          />
         </div>
+
+        <div class="car-card__body">
+          <h1 class="car-card__title">${car.brand} ${car.model}</h1>
+          <ul class="car-card__meta">
+            <li><strong>Type:</strong> ${car.type}</li>
+            <li><strong>Body style:</strong> ${car.bodystyle}</li>
+            <li><strong>Year:</strong> ${car.year}</li>
+            <li><strong>Seats:</strong> ${car.seats}</li>
+            <li><strong>Lease type:</strong> ${car.leaseType}</li>
+          </ul>
+          <div class="car-card__price">
+            <span class="car-card__price-label">Price:</span>
+            <span class="car-card__price-value">£${Number(car.price).toLocaleString("en-GB")}</span>
+          </div>
+        </div>
+      </div>
+      <div class = "car-card__buy">
+        <!--THIS NEEDS TO BE LINKED TO A BUY PAGE-->
+        <a href='https://en.wikipedia.org/wiki/Buy_Me_(film)'>BUY ME</a>
       </div>
     </article>
   `;
