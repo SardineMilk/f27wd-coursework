@@ -20,10 +20,6 @@
   flex-shrink: 0;
 }
 
-
-
-
-
 @media(max-width: 800px){
   .navbar{
     padding: 10px 20px;
