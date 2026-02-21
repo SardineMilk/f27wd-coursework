@@ -1,6 +1,7 @@
 # f27wd-coursework
 A remake of the site www.lingscars.com, for a university course
 
+***THIS IS A REMAKE, NOT A REAL WEBSITE***
 
 <br/><br/>
 <br/><br/>
