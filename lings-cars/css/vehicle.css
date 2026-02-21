@@ -1,0 +1,17 @@
+.car-card {
+    display: flex;
+}
+
+#carImg{
+    width: 30vw;
+}
+.car-card__car-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10vw; 
+}
+.car-card__buy {
+    padding-left: 15vw;
+    padding-top: 5vw;
+}
