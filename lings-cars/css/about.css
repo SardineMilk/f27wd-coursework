@@ -9,6 +9,10 @@
     margin-right: 50px;
 
     transition: 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Slight shadow and pop-out effect on hover */
@@ -27,3 +31,11 @@
 .staff-card-description {
     clear: right;
 }
+
+.text {
+    flex: 1;
+
+}
+
+.image {
+    
