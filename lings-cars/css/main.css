@@ -93,7 +93,7 @@ body {
 }
 
 .search-button {
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-text);
     border: 3px solid var(--color-border);
     padding: 10px 20px;
