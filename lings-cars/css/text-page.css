@@ -1,0 +1,41 @@
+/* Style for text-only pages */
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin: 20px 0; /* vertical space for headings */
+}
+
+/* Styles for headings, getting smaller w less padding*/
+h1 {
+    font-size: 2.5em;
+    padding-bottom: 10px; 
+    color: var(--color-secondary);
+}
+
+h2 {
+    font-size: 2em; 
+    padding-bottom: 8px; 
+    color: var(--color-primary);
+
+}
+
+h3 {
+    font-size: 1.75em; 
+    padding-bottom: 6px;
+}
+
+
+p, ul, ol{
+    margin: 15px 0; 
+    padding: 10px; 
+    background-color: var(--color-surface); 
+    border-radius: 5px; 
+}
+
+ul, ol {
+    padding-left: 20px;
+}
