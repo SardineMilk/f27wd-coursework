@@ -3,9 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: var(--color-surface);
   padding: 15px 40px;
-  border-bottom: 8px solid var(--color-border);
 }
 
 .navbar img {
