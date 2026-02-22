@@ -94,7 +94,7 @@ function updateSlider() {
     const rangeText = document.getElementById('range-text');
     
     //updates the text range
-    rangeText.innerHTML = `£${minPriceField.value} -> £${maxPriceField.value}`;
+    rangeText.innerHTML = `£${minPriceField.value} → £${maxPriceField.value}`;
 
     /* Allows the min slider to push the max */
     const buffer = (maxPriceField.max / 20);

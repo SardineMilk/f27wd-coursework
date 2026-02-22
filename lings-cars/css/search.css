@@ -222,3 +222,8 @@ main {
     cursor: pointer;
     z-index: 5; 
 }
+
+#range-text {
+    margin-top: 0px;
+    margin-left: 20px;
+}

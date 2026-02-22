@@ -76,18 +76,18 @@
 
         <label class="search-control-field">
             Price range (£ Per month):
-            <div>
-                <p id="range-text">£0 -> £2000</p>
-            </div>
+
 
             <div class="range-container">
                 <div class="slider-track" id="full-track"></div>
                 <div class="slider-track" id ="selected-track"></div>
 
-                <input type="range" id="price-min" min="0" max="2000" value="0">
-                <input type="range" id="price-max" min="0" max="2000" value="2000">
+                <input type="range" id="price-min" min="0" max="2000" value="0" step="50">
+                <input type="range" id="price-max" min="0" max="2000" value="2000" step="50">
             </div>
-
+            <div>
+                <p id="range-text">£0 → £2000</p>
+            </div>
         </label>
 
     </div> 
