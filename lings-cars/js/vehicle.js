@@ -34,9 +34,8 @@ function createCarCard(car) {
           </div>
         </div>
       </div>
-      <div class = "car-card__buy">
-        <!--THIS NEEDS TO BE LINKED TO A BUY PAGE-->
-        <a href='https://en.wikipedia.org/wiki/Buy_Me_(film)'>BUY ME</a>
+      <div class="car-card__container">
+      <button class="search-button" onclick="window.location.href='https://en.wikipedia.org/wiki/Buy_Me_(film)'">Buy Me</button>
       </div>
     </article>
   `;

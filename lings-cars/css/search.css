@@ -25,6 +25,9 @@
     gap: 15px;
     box-shadow: 0 4px 6px var(--color-border);
 
+    max-height: calc(100vh - var(--navbar-height) - 20px);
+    overflow-y: auto;
+
 
 }
 
@@ -136,21 +139,19 @@
 /* make content align side by side by making the main a flex container*/
 main {
     display: flex;
-    /* -navbar height */
-    height: calc(100vh - var(--navbar-height));
-    gap: 10px;
-
+    min-height: calc(100vh - var(--navbar-height));
     /*set background to purple-backgroud.jpg and ensure it would fit to different screen sizes*/
     background: url('../assets/images/purple-background.jpg');
     background-repeat: repeat-y;
     background-size: auto auto;
+
 
 }
 
 .page-layout {
     display: flex;
     /* subtract navbar height */
-    height: calc(100vh - 80px); 
+    min-height: calc(100vh);
 }
 
 

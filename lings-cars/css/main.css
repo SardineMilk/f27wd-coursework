@@ -105,6 +105,10 @@ body {
     display: inline-block;
 }
 
+.search-button:hover {
+    border-color: var(--color-hover);
+}
+
 
 
 main { 
