@@ -37,3 +37,10 @@
 
 }
 
+.staff-card img {
+    width: 250px;     
+    height: 250px;      
+    object-fit: cover;    
+    border-radius: 10px;  
+    border: 2px solid var(--color-border);
+}
